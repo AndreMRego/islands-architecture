@@ -1,5 +1,3 @@
-![juntos-somos-devs](https://user-images.githubusercontent.com/3603793/131751022-fda4146c-9ada-4ad0-82fc-d8f0a73acd3f.png)
-
 # Islands Architecture
 
 > "SEO and UX aren’t a tradeoff"
