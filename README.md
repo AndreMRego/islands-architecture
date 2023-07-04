@@ -2,28 +2,28 @@
 
 > "SEO and UX aren’t a tradeoff"
 
-The following document explains what is, when we should use, PROS/CONS using Islands Architecture.
+The following document explains what Islands Architecture is, when we should use it, and its pros and cons.
 
 ## 📖 Summary
 
 1. [What it is?](#1-what-it-is)
 2. [When we should use it](#2-when-we-should-use-it)
-3. [PROS](#3-pros)
-4. [CONS](#4-cons)
+3. [Pros](#3-pros)
+4. [Cons](#4-cons)
 
 ---
 
 ## 1. What it is?
 
-Island Architecture is used when rendering HTML pages on the server. These pages consist of various applications such as the header, cart, and footer apps. Each application has its own HTML and is referred to as slots. If certain applications require interactivity for users, we can "hydrate" the application by sending JavaScript code to add interactivity. For instance, a button with a click action can be rendered on the server but needs to be hydrated in order to enable the click event.
+Island Architecture is used for rendering HTML pages on the server. These pages consist of various applications, such as the header, cart, and footer apps, each having its own HTML and referred to as slots. If certain applications require interactivity for users, we can "hydrate" the application by sending JavaScript code to add interactivity. For instance, a button with a click action can be rendered on the server but needs to be hydrated in order to enable the click event.
 
 
 ## 2. When we should use it
 
-We can use it when we need to reduce the volume of JavaScript shipped in our application. If some of our pages need only HTML and CSS to work, we don't need to load unnecessary Javascript to them. Another scenario is when a page has some part with dynamic content, so we can server-side render all of their static content. The rendered HTML will include placeholders for dynamic content, that placeholders contain self-contained component widgets. Each widget is similar to an app and combines server-rendered output and JavaScript used to hydrate the app on the client.
+We can use it when we need to reduce the volume of JavaScript shipped in our application. If some of our pages only require HTML and CSS to function, there is no need to load unnecessary JavaScript for them. Another scenario is when a page has a section with dynamic content. In such cases, we can perform server-side rendering for all of the static content on the page. The rendered HTML will include placeholders for the dynamic content, with each placeholder containing a self-contained component widget. Each widget functions like an app, combining server-rendered output with JavaScript that is used to hydrate the app on the client.
 
 
-## 3. PROS
+## 3. Pros
 
 - 3.1 [Performance](#31-performance)
 - 3.2 [SEO](#32-seo)
@@ -33,12 +33,11 @@ We can use it when we need to reduce the volume of JavaScript shipped in our app
 
 ### 3.1 Performance
 
-The amount of JavaScript code shipped to the client is reduced, because the javascript sent only the required code for interactive components
+The amount of JavaScript code shipped to the client is reduced because only the required code for interactive components is sent.
 
 ### 3.2 SEO
 
 Since all of the static content is rendered on the server; pages are SEO-friendly.
-
 
 ### 3.3 Prioritizes important content
 
@@ -48,7 +47,7 @@ Key content (especially for blogs, news articles, and product pages) is availabl
 
 The architecture offers all advantages of component-based architecture, such as reusability and maintainability.
 
-## 4. CONS
+## 4. Cons
 
 - 4.1 [Implement Support](#41-limited-support)
 - 4.2 [Community Suport](#42-community-suport)
@@ -56,11 +55,11 @@ The architecture offers all advantages of component-based architecture, such as 
 
 ### 4.1 Limited Support
 
-The concept is still in a nascent stage, the only options available to developers to implement Islands are to use one of the few frameworks available or develop the architecture yourself. 
+The concept is still in a nascent stage, and currently, developers have only a few options to implement Islands: either using one of the few available frameworks or developing the architecture themselves.
 
 ### 4.2 Community Suport
 
-Community discussion about the idea is in the beginning. So if you have some problem during the implementation you don't find many answers is community blogs.
+Community discussions about the idea are in the early stages. Therefore, if you encounter any problems during the implementation, you may not find many answers in community blogs.
 
 ### 4.3 Highly interactive
 
